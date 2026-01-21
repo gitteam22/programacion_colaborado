@@ -1,7 +1,7 @@
 import math
 
 def mostrar_menu():
-    print("\n--- MENÚ DE OPCIONES ---")
+    print("\nMENÚ DE OPCIONES")
     print("1. Suma de 'n' números")
     print("2. Producto de 'n' números")
     print("3. División entre 2 números")
