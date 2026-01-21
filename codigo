@@ -65,6 +65,6 @@ def ejecutar_programa():
             break
         else:
             print("Opción no válida.")
-# hola
+
 if __name__ == "__main__":
     ejecutar_programa()
