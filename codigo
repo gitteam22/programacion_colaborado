@@ -1,1 +1,13 @@
+import math
 
+def mostrar_menu():
+    print("\n--- MENÚ DE OPCIONES ---")
+    print("1. Suma de 'n' números")
+    print("2. Producto de 'n' números")
+    print("3. División entre 2 números")
+    print("4. Calcular factorial (n!)")
+    print("5. Tablas de multiplicar (1-10)")
+    print("6. Cuadrado y cubo de un número")
+    print("7. Promedio (media) - Detener con -1")
+    print("8. Valor máximo, mínimo y total de números")
+    print("9. Salir")
