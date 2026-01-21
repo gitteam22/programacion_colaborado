@@ -11,3 +11,60 @@ def mostrar_menu():
     print("7. Promedio (media) - Detener con -1")
     print("8. Valor máximo, mínimo y total de números")
     print("9. Salir")
+
+def ejecutar_programa():
+    while True:
+        mostrar_menu()
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == '1':
+            nums = input("Ingrese los números separados por espacio: ").split()
+            print(f"Resultado: {sum(float(n) for n in nums)}")
+
+        elif opcion == '2':
+            nums = input("Ingrese los números separados por espacio: ").split()
+            res = 1
+            for n in nums: res *= float(n)
+            print(f"Resultado: {res}")
+
+        elif opcion == '3':
+            n1 = float(input("Número 1: "))
+            n2 = float(input("Número 2: "))
+            print(f"Resultado: {n1 / n2 if n2 != 0 else 'Error: División por cero'}")
+
+        elif opcion == '4':
+            n = int(input("Ingrese número: "))
+            print(f"Factorial: {math.factorial(n)}")
+
+        elif opcion == '5':
+            n = int(input("Número de tabla (1-10): "))
+            for i in range(1, 11):
+                print(f"{n} x {i} = {n * i}")
+
+        elif opcion == '6':
+            n = float(input("Ingrese número: "))
+            print(f"Cuadrado: {n**2}, Cubo: {n**3}")
+
+        elif opcion == '7':
+            lista = []
+            while True:
+                n = float(input("Ingrese número (-1 para finalizar): "))
+                if n == -1: break
+                lista.append(n)
+            print(f"Promedio: {sum(lista)/len(lista) if lista else 0}")
+
+        elif opcion == '8':
+            nums = []
+            cant = int(input("¿Cuántos números ingresará?: "))
+            for _ in range(cant):
+                nums.append(int(input("Número: ")))
+            print(f"Máximo: {max(nums)}, Mínimo: {min(nums)}, Total: {len(nums)}")
+
+        elif opcion == '9':
+            print("Saliendo...")
+            break
+        else:
+            print("Opción no válida.")
+
+if __name__ == "__main__":
+    ejecutar_programa()
